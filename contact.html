@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="text">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="portfolioo.css">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="sidebar">
+          <nav>
+                  <input type="checkbox" id="check">
+                  <label for="check" id="checkbutton"><img src="menu.png" alt="" width="30px"></label>
+                  <label class="heading">PORTFOLIO</label>
+                      <ul>
+                          <li><a href="/protfolioproject/portfolio.html">home</a></li>
+                          <li><a href="/protfolioproject/projects.html">projects</a></li>
+                          <li><a href="/protfolioproject/myinto.html">myintro</a></li>
+                          <li><a href="/protfolioproject/skills.html">skills</a></li>
+                          <li><a href="/protfolioproject/contact.html">contactme</a></li>
+                      </ul>   
+                  </nav>
+        </div>
+        <div class="personalform">
+            <form>
+              <h1>PERSONAL INFORMATION</h1>
+                <div class="mb-3">
+                  <div><label for="contactname" class="form-label">Name:</label></div>
+                  <span id="name-error"></span>
+                  <div><input type="text" name="Name" id="contactname" onkeyup="validatename()"></div>
+                </div>
+                <div class="mb-3">
+                  <div><label for="emails" class="form-label">Email address:</label></div>
+                  <span id="mail-error"></span>
+                  <div><input type="email" name="Email" id="emails" onkeyup="validateemail()"></div>
+                </div>
+                <div class="mb-3">
+                 <div><label for="phone1" class="form-label">phone number:</label></div>
+                 <span id="phone-error"></span>
+                 <div><input type="phone" class="form-control" id="phone1" onkeyup="validatephone()" name="Phone"></div>
+                </div>
+                <div class="mb-3">
+                  <div><label for="dob">date of birth:</label></div>
+                  <span id="date-error"></span>
+                  <div><input type="date" id="dob" name="DOB"></div>
+                </div>
+                <div class="mb-3">
+                  <div><label for="Address">Address:</label></div>
+                  <span id="yogesh"></span>
+                  <div><textarea type="text" id="Address" name="address" onkeyup="validateadress()"></textarea></div>
+                </div>
+                <span id="submit-error"></span>
+                <button type="submit" class="bb" onclick="Sendmail()">Submit</button>
+              </form>
+        </div>
+    </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="/protfolioproject/contact.js"></script>
+    </body>
+</html>
